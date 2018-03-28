@@ -330,7 +330,7 @@ class PhoneBookListPage extends React.Component<Props, State> {
   }
  
   private handleSortOrderChange = (key, order) => {
-    order === 'desc' ? sortByStringDescending(PhoneBooks, key) : sortByStringAscending(PhoneBooks, key)
+    order === 'desc' ? sortByStringDescending(this.state.allItems, key) : sortByStringAscending(this.state.allItems, key)
   }
 
   private handleFirstName = (e:React.FormEvent<HTMLInputElement>) => {
